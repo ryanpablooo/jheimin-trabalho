@@ -12,6 +12,8 @@ h1 {
   text-align: center;
   color: #ff4081; /* Cor vibrante para o título */
   margin: 20px 0;
+  font-size: 2.5em; /* Tamanho maior para o título */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o título */
 }
 
 /* Container para os cartões */
@@ -25,18 +27,19 @@ h1 {
 /* Estilo dos cartões */
 .cartao {
   background-color: #1e1e1e; /* Fundo dos cartões */
-  border-radius: 10px; /* Bordas arredondadas */
-  margin: 10px;
+  border-radius: 15px; /* Bordas arredondadas */
+  margin: 15px; /* Margem entre os cartões */
   padding: 20px;
   width: 300px; /* Largura fixa dos cartões */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
-  transition: transform 0.2s; /* Transição suave para o efeito de hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa para profundidade */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para o efeito de hover */
   position: relative; /* Para posicionar a resposta */
 }
 
 /* Efeito de hover nos cartões */
 .cartao:hover {
-  transform: scale(1.05); /* Aumenta o tamanho do cartão ao passar o mouse */
+  transform: translateY(-5px); /* Levanta o cartão ao passar o mouse */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Estilo do conteúdo do cartão */
@@ -49,6 +52,7 @@ h1 {
   font-weight: bold; /* Negrito para a pergunta */
   margin: 10px 0;
   color: #ffeb3b; /* Cor amarela para a pergunta */
+  font-size: 1.2em; /* Tamanho da fonte da pergunta */
 }
 
 /* Estilo da resposta */
@@ -60,11 +64,16 @@ h1 {
   bottom: 20px; /* Distância do fundo do cartão */
   left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-50%); /* Ajusta a posição para centralizar */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para a resposta */
+  border-radius: 5px; /* Bordas arredondadas para a resposta */
+  padding: 10px; /* Espaçamento interno */
+  transition: opacity 0.3s ease; /* Transição suave para a opacidade */
 }
 
 /* Exibe a resposta ao passar o mouse sobre a pergunta */
 .cartao__conteudo__pergunta:hover + .cartao__conteudo__resposta {
   display: block; /* Mostra a resposta ao passar o mouse */
+  opacity: 1; /* Garante que a opacidade seja 1 */
 }
 
 /* Estilo do rodapé */
@@ -75,4 +84,6 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  color: #ffeb3b; /* Cor amarela para o rodapé */
+  font-size: 0.9em; /* Tamanho da fonte do rodapé */
 }
