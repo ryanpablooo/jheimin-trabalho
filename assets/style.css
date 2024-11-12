@@ -73,3 +73,11 @@ footer p {
       grid-template-columns: 1fr;
   }
 }
+
+.cartao__conteudo__resposta {
+  display: none; /* Oculta a resposta por padrão */
+}
+
+.cartao:hover .cartao__conteudo__resposta {
+  display: block; /* Exibe a resposta ao passar o mouse sobre o cartão */
+}
