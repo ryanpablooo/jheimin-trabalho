@@ -8,7 +8,7 @@
 
 body {
   background: url(img/bg-desktop-blue.webp);
-  font-family: 'Tomorrow', sans-serif; /* Adicionei 'sans-serif' como fallback */
+  font-family: 'Tomorrow', sans-serif; 
 }
 
 .cartao__conteudo {
