@@ -1,31 +1,78 @@
-/* assets/style.css */
-
+/* Estilo geral do corpo */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #121212; /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
   margin: 0;
+  padding: 0;
+}
+
+/* Estilo do título principal */
+h1 {
+  text-align: center;
+  color: #ff4081; /* Cor vibrante para o título */
+  margin: 20px 0;
+}
+
+/* Container para os cartões */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
-h1 {
-  color: #ff4081;
-  margin-bottom: 20px;
-}
-
-#container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-
+/* Estilo dos cartões */
 .cartao {
-  background-color: #1e1e1e;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5
+  background-color: #1e1e1e; /* Fundo dos cartões */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin: 10px;
+  padding: 20px;
+  width: 300px; /* Largura fixa dos cartões */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+  transition: transform 0.2s; /* Transição suave para o efeito de hover */
+  position: relative; /* Para posicionar a resposta */
+}
+
+/* Efeito de hover nos cartões */
+.cartao:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do cartão ao passar o mouse */
+}
+
+/* Estilo do conteúdo do cartão */
+.cartao__conteudo {
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo da pergunta */
+.cartao__conteudo__pergunta {
+  font-weight: bold; /* Negrito para a pergunta */
+  margin: 10px 0;
+  color: #ffeb3b; /* Cor amarela para a pergunta */
+}
+
+/* Estilo da resposta */
+.cartao__conteudo__resposta {
+  display: none; /* Oculta a resposta inicialmente */
+  font-style: italic; /* Estilo itálico para a resposta */
+  color: #b0bec5; /* Cor cinza claro para a resposta */
+  position: absolute; /* Posiciona a resposta em relação ao cartão */
+  bottom: 20px; /* Distância do fundo do cartão */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição para centralizar */
+}
+
+/* Exibe a resposta ao passar o mouse sobre a pergunta */
+.cartao__conteudo__pergunta:hover + .cartao__conteudo__resposta {
+  display: block; /* Mostra a resposta ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e; /* Fundo do rodapé */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
